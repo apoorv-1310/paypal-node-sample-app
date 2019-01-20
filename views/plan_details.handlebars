@@ -1,0 +1,48 @@
+<div class="container">
+  <hr class="my-4">
+  <h4>Plans</h4>
+  <div class="row">
+    <div class="col-md-4 col-md-offset-2 alert-success" style="padding: 20px;">
+      <p>PlanId: {{{billingPlan.id}}}</p>
+      <p>Plan Name: {{{billingPlan.name}}}</p>
+      <p>Description: {{{billingPlan.description}}}</p>
+      <p>Amount: {{{billingPlan.payment_definitions.[0].amount.currency}}} {{{billingPlan.payment_definitions.[0].amount.value}}}</p>
+      <p>type: {{{billingPlan.payment_definitions.[0].type}}}</p>
+      <p>frequency: {{{billingPlan.payment_definitions.[0].frequency}}}</p>
+      <p>Return URL: {{{billingPlan.merchant_preferences.return_url}}}</p>
+      <p>Cancel URL: {{{billingPlan.merchant_preferences.cancel_url}}}</p>
+      <p>Links: {{{billingPlan.links.[0].href}}}</p>
+    </div>
+  </div>
+</div>
+
+<!--
+
+{ id: 'P-2DJ52571TU0267548I2TGZPI',
+  state: 'ACTIVE',
+  name: 'Vendor liveClinic marketplace monthly subscription',
+  description: 'Vendor liveClinic marketplace monthly subscription',
+  type: 'INFINITE',
+  payment_definitions:
+   [ { id: 'PD-3N6554488X351442UI2TGZPI',
+       name: 'Vendor liveClinic marketplace monthly subscription',
+       type: 'REGULAR',
+       frequency: 'Month',
+       amount: { currency: 'USD', value: '80' },
+       cycles: '0',
+       frequency_interval: '1' } ],
+  merchant_preferences:
+   { setup_fee: { currency: 'USD', value: '0' },
+     max_fail_attempts: '1',
+     return_url: 'http://localhost:3000/active-subscription',
+     cancel_url: 'http://localhost:3000/failed-subscription',
+     auto_bill_amount: 'YES',
+     initial_fail_amount_action: 'CONTINUE' },
+  create_time: '2019-01-13T09:58:58.493Z',
+  update_time: '2019-01-13T09:59:06.318Z',
+  links:
+   [ { href:
+        'https://api.sandbox.paypal.com/v1/payments/billing-plans/P-2DJ52571TU0267548I2TGZPI',
+       rel: 'self',
+       method: 'GET' } ],
+  httpStatusCode: 200 } -->

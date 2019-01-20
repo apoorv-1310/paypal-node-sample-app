@@ -1,0 +1,30 @@
+<div class="container">
+  <hr class="my-4">
+  <div class="row">
+  <h4>Create New Plans</h4>
+
+  <div class="col-md-12">
+      <form method="get" action="/create_new_plan">
+        <p><input type="text" name="name" placeholder="name" class="form-control" required/></p>
+        <p><input type="text" name="amount" placeholder="amount" class="form-control" required/></p>
+        <p>
+          frequency
+          <select name="frequency" class="form-control" required>
+            <option value="MONTH" selected>MONTH</option>
+            <option value="YEAR">YEAR</option>
+          </select>
+        </p>
+        <p>Default
+          <select name="default" class="form-control" required>
+            <option value="false" selected>No</option>
+            <option value="true">Yes</option>
+          </select>
+        </p>
+        <p><input type="text" name="description" placeholder="Description" class="form-control" required/></p>
+        <p><input type="text" name="cancel_url" value="/failed-subscription" placeholder="cancel_url" class="form-control" required/></p>
+        <p><input type="text" name="return_url" value="/active-subscription" placeholder="return_url" class="form-control"/></p>
+        <input type="submit" class="btn btn-success"/>
+      </form>
+    </div>
+  </div>
+</div>

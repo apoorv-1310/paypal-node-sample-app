@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>liveClinic Paypal App</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+</head>
+
+<body class="container" style="background-color: #fafafa;">
+  {{#if admin}}
+  <div class="col-md-12">
+    <p align="center">
+      <a style="background-color:#1890ff" class="btn btn-success" href="/">Home</a>
+      <a style="background-color:#1890ff" class="btn btn-success" href="/?status=created">Created</a>
+      <a style="background-color:#1890ff" class="btn btn-success" href="/?status=active">Active</a>
+      <a style="background-color:#1890ff" class="btn btn-success" href="/?status=unactive">UnActive</a>
+      <a style="background-color:#1890ff" class="btn btn-success" href="/create_plan">Create New Plan</a>
+      <a style="background-color:#1890ff" class="btn btn-success" href="/subscription_plans">Subscription Plans</a>
+      <a style="background-color:#1890ff" class="btn btn-success" href="/logout" data-method="post">Logout</a>
+    </p>
+  </div>
+  {{/if}}
+
+  {{{body}}}
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+</body>
+</html>
